@@ -3,7 +3,7 @@
 
 ---
 
-### HOW TO BUILD AND INSTALL
+###   HOW TO BUILD AND INSTALL
 
 **Requirements:** Java 17, Git
 
