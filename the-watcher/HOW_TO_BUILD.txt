@@ -1,0 +1,36 @@
+HOW TO TURN THIS INTO A REAL .JAR (5 minutes, one Terminal command)
+=====================================================================
+
+Why this step exists: this folder is SOURCE CODE, not a finished mod.
+I can't compile it into a .jar myself — Minecraft/Fabric's build servers
+aren't reachable from where I run — but your own Mac can do it in one
+command, for free, no coding needed.
+
+STEP 1 — Install Java 17 (if you don't already have it)
+  - Go to: https://adoptium.net/temurin/releases/?version=17
+  - Download the macOS .pkg for your chip (Apple Silicon = aarch64,
+    Intel = x64) and install it like any other app.
+
+STEP 2 — Unzip this file
+  Double-click "the-watcher-mod-source.zip" if it isn't unzipped already.
+  You should end up with a folder called "the-watcher".
+
+STEP 3 — Open Terminal and run:
+  cd ~/Downloads/the-watcher      (adjust path to wherever you unzipped it)
+  chmod +x gradlew
+  ./gradlew build
+
+This will take a minute or two the first time (it downloads the Fabric
+build tools). When it finishes, your real mod file will be at:
+
+  build/libs/the-watcher-1.0.0.jar
+
+STEP 4 — Install it
+  Drag "the-watcher-1.0.0.jar" into:
+  ~/Library/Application Support/minecraft/mods
+
+  Then open Minecraft Launcher, pick the fabric-loader profile, hit Play.
+
+If Terminal shows an error during ./gradlew build, copy the FULL error
+text and send it back — that's the normal way these get fixed, and it's
+a much smaller/faster fix than starting over.

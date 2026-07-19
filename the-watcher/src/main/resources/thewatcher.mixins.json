@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "package": "com.thewatcher.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [],
+  "client": [
+    "PaintingEntityRendererMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}

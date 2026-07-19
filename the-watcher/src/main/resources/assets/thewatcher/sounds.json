@@ -1,0 +1,8 @@
+{
+  "ambient_scream":    { "sounds": [{"name":"thewatcher:ambient_scream","stream":false}] },
+  "breathing":         { "sounds": [{"name":"thewatcher:breathing","stream":false}] },
+  "footsteps_echo":    { "sounds": [{"name":"thewatcher:footsteps_echo","stream":false}] },
+  "jumpscare_sting":   { "sounds": [{"name":"thewatcher:jumpscare_sting","stream":false}] },
+  "world_red_ambience":{ "sounds": [{"name":"thewatcher:world_red_ambience","stream":false}] },
+  "disc_distorted":    { "sounds": [{"name":"thewatcher:disc_distorted","stream":true}] }
+}
