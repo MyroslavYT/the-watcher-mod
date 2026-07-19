@@ -26,7 +26,7 @@ public class WatcherEntity extends MobEntity {
         if(players.isEmpty()) return;
         PlayerEntity nearest=players.stream().min((a,c)->Double.compare(distanceTo(a),distanceTo(c))).orElse(null);
         if(nearest==null) return;
-        lookAt(EntityAnchor.EYES, nearest.getEyePos());
+        getLookControl().lookAt(nearest, 360f, 360f);
         if(distanceTo(nearest)<12){scheduleDisappear();return;}
         if(markedForRemoval){disappearTimer++;if(disappearTimer>15)discard();}
     }
