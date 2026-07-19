@@ -9,7 +9,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-   - run: chmod +x the-watcher/gradlew
+      - run: chmod +x the-watcher/gradlew
       - run: cd the-watcher && ./gradlew build
       - uses: actions/upload-artifact@v4
         with:
