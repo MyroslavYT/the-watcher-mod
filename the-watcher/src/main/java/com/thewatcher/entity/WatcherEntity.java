@@ -1,12 +1,12 @@
 package com.thewatcher.entity;
 import net.minecraft.entity.*;
+import net.minecraft.entity.EntityAnchor;
 import net.minecraft.entity.attribute.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import java.util.List;
-public class WatcherEntity extends MobEntity {
     private int disappearTimer=0;
     public boolean markedForRemoval=false;
     public WatcherEntity(EntityType<? extends WatcherEntity> type,World world){
