@@ -9,7 +9,13 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - run: chmod +x the-watcher/gradlew
+      - name: Regenerate Gradle wrapper files
+        run: |
+          cd the-watcher
+          curl -s -L https://raw.githubusercontent.com/gradle/gradle/v8.5.0/gradlew -o gradlew
+          mkdir -p gradle/wrapper
+          curl -s -L https://raw.githubusercontent.com/gradle/gradle/v8.5.0/gradle/wrapper/gradle-wrapper.jar -o gradle/wrapper/gradle-wrapper.jar
+          chmod +x gradlew
       - run: cd the-watcher && ./gradlew build
       - uses: actions/upload-artifact@v4
         with:
