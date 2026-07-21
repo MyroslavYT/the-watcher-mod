@@ -9,7 +9,7 @@ public class BookFactory {
 
     private static String j(String t){
         // Escape for JSON inside Minecraft book NBT
-        String s=t.replace("\\","\\\\").replace("\"","\\"");
+        String s=t.replace("\\","\\\\").replace("\"","\\\"");
         return "{\"text\":\""+s+"\"}";
     }
 
