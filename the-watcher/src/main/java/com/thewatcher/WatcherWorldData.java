@@ -15,7 +15,6 @@ public class WatcherWorldData extends PersistentState {
     private int advIdx = 0;
     private int randomHoles = 0;
     private boolean paintingsCorrupted = false;
-
     public static WatcherWorldData getOrCreate(ServerWorld w) {
         return w.getPersistentStateManager().getOrCreate(
             new PersistentState.Type<>(WatcherWorldData::new, WatcherWorldData::fromNbt, null), KEY);
